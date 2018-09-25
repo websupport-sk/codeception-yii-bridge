@@ -1,6 +1,8 @@
 <?php
-function launch_codeception_yii_bridge() {
-    Yii::setPathOfAlias('codeception-yii',__DIR__);
+
+function launch_codeception_yii_bridge()
+{
+    Yii::setPathOfAlias('codeception-yii', __DIR__);
     Yii::import('codeception-yii.test.CTestCase');
     Yii::import('codeception-yii.web.CodeceptionCookieCollection');
     Yii::import('codeception-yii.web.CodeceptionHttpRequest');
