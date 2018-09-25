@@ -30,6 +30,16 @@ class CodeceptionHttpRequest extends \CHttpRequest
         return $this->_cookies = new CodeceptionCookieCollection($this);
     }
 
+    public function getServerName()
+    {
+        return isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '';
+    }
+
+    public function getServerPort()
+    {
+        return isset($_SERVER['SERVER_PORT']) ? $_SERVER['SERVER_PORT'] : null;
+    }
+
     public function redirect($url, $terminate = true, $statusCode = 302)
     {
         $this->setHeader('Location', $url);
