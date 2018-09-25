@@ -1,9 +1,7 @@
 <?php
 
-
 class CodeceptionHttpRequest extends \CHttpRequest
 {
-
 	private $_headers = array();
 
 	protected $_cookies;
@@ -37,20 +35,4 @@ class CodeceptionHttpRequest extends \CHttpRequest
 		if($terminate)
 			Yii::app()->end(0,false);
 	}
-
-}
-
-class CodeceptionCookieCollection extends CCookieCollection
-{
-
-	protected function addCookie($cookie)
-	{
-		$_COOKIE[$cookie->name] = $cookie->value;
-	}
-
-	protected function removeCookie($cookie)
-	{
-		unset($_COOKIE[$cookie->name]);
-	}
-
 }
