@@ -3,5 +3,12 @@
     "description": "Codeception YiiBridge extension",
     "license": "MIT",
     "type": "package",
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii": "^1.1.14"
+    },
+    "autoload": {
+        "classmap": ["src/"],
+        "files": ["src/yiit.php"]
+    }
 }
