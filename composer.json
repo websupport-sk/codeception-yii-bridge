@@ -1,6 +1,6 @@
 {
-    "name": "codeception/YiiBridge",
-    "description": "YiiBridge extension",
+    "name": "websupport/codeception-yii-bridge",
+    "description": "Codeception YiiBridge extension",
     "license": "MIT",
     "type": "package",
     "minimum-stability": "dev"
