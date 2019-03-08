@@ -62,16 +62,6 @@ class Yii1 extends Framework implements PartedModule
         $_SERVER['SCRIPT_NAME'] = parse_url($this->config['url'], PHP_URL_PATH);
         $_SERVER['SCRIPT_FILENAME'] = $this->config['appPath'];
 
-        if (!function_exists('launch_codeception_yii_bridge')) {
-            throw new ModuleConfigException(
-                __CLASS__,
-                "Codeception-Yii Bridge is not launched. In order to run tests you need to install "
-                . "https://github.com/Codeception/YiiBridge Implement function 'launch_codeception_yii_bridge' to "
-                . "load all Codeception overrides"
-            );
-        }
-        launch_codeception_yii_bridge();
-
         Yii::$enableIncludePath = false;
         Yii::setApplication(null);
         Yii::createApplication($this->appSettings['class'], $this->_appConfig);
