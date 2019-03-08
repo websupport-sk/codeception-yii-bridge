@@ -6,6 +6,8 @@ class CodeceptionHttpRequest extends \CHttpRequest
 
     protected $_cookies;
 
+    private $rawBody;
+
     public function setHeader($name, $value)
     {
         $this->_headers[$name] = $value;
@@ -46,5 +48,15 @@ class CodeceptionHttpRequest extends \CHttpRequest
         if ($terminate) {
             Yii::app()->end(0, false);
         }
+    }
+
+    public function getRawBody()
+    {
+        return $this->rawBody;
+    }
+
+    public function setRawBody($body)
+    {
+        $this->rawBody = $body;
     }
 }
