@@ -9,7 +9,6 @@
         "codeception/codeception": "^2.0.0"
     },
     "autoload": {
-        "classmap": ["src/"],
-        "files": ["src/yiit.php"]
+        "classmap": ["src/"]
     }
 }
