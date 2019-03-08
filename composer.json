@@ -5,7 +5,8 @@
     "type": "package",
     "minimum-stability": "dev",
     "require": {
-        "yiisoft/yii": "^1.1.14"
+        "yiisoft/yii": "^1.1.14",
+        "codeception/codeception": "^2.0.0"
     },
     "autoload": {
         "classmap": ["src/"],

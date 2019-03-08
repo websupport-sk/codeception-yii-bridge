@@ -1,4 +1,5 @@
 <?php
+namespace Websupport\CodeceptionYiiBridge\Yii1\Web;
 
 class CodeceptionHttpRequest extends \CHttpRequest
 {
@@ -46,7 +47,7 @@ class CodeceptionHttpRequest extends \CHttpRequest
     {
         $this->setHeader('Location', $url);
         if ($terminate) {
-            Yii::app()->end(0, false);
+            \Yii::app()->end(0, false);
         }
     }
 
